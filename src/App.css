@@ -1,0 +1,133 @@
+/* Container principal para não deixar a tela esticar infinitamente */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos do Formulário */
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaço entre os campos */
+  background-color: var(--code-bg);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin-bottom: 40px;
+}
+
+.task-form input,
+.task-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background-color: var(--bg);
+  color: var(--text-h);
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.task-form input:focus,
+.task-form textarea:focus {
+  border-color: var(--accent);
+}
+
+.task-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.task-form button {
+  padding: 14px;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.task-form button:hover {
+  opacity: 0.9;
+}
+
+/* Estilos da Lista e dos Cartões de Tarefa */
+.task-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.task-card {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left; /* Tira o texto do centro */
+  transition: transform 0.2s;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+}
+
+.task-card h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.task-card p {
+  color: var(--text);
+}
+
+.task-btn {
+  font-size: 16px;
+  display: flex;
+  flex-flow: row;
+  align-items: end;
+  justify-content: end;
+  gap: 15px;
+  margin: 5px;
+}
+
+.update-btn,
+.delete-btn {
+  cursor: pointer;
+}
+
+.status-badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: var(--accent-bg);
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+/* Cores específicas para cada Status */
+.status-pendente {
+  background-color: #e5e7eb; /* Cinza claro */
+  color: #4b5563; /* Cinza escuro */
+}
+
+.status-andamento {
+  background-color: #fef3c7; /* Laranja/Amarelo bem claro */
+  color: #d97706; /* Laranja escuro */
+}
+
+.status-concluido {
+  background-color: #d1fae5; /* Verde claro */
+  color: #059669; /* Verde escuro */
+}
+
+.status-expirado {
+  background-color: #fee2e2; /* Vermelho claro */
+  color: #dc2626; /* Vermelho escuro */
+}
